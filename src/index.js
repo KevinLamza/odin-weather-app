@@ -22,12 +22,15 @@ async function newRequest(city) {
         '?key=CQ78E2P96ZCAAKF2DTK6F4FU3',
       { mode: 'cors' },
     );
-    const data = await response.json();
-    console.log(data);
-    processData(data);
+    const rawData = await response.json();
+    console.log(rawData);
+    const processedData = processData(rawData);
+    console.log(processedData);
+    // updateUI()
   } catch (error) {
     alert(error);
   }
 }
 
+// fetchDOM()
 newRequest('Istanbul');
