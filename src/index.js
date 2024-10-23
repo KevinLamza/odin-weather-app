@@ -12,15 +12,50 @@ if (process.env.NODE_ENV !== 'production') {
 
 // ---------------------- START YOUR CODE BELOW HERE
 
-async function fetchData(city) {
-  const response = await fetch(
-    'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/' +
-      city +
-      '?key=CQ78E2P96ZCAAKF2DTK6F4FU3',
-    { mode: 'cors' },
-  );
-  const data = await response.json();
-  console.log(data);
+async function newRequest(city) {
+  try {
+    const response = await fetch(
+      'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/' +
+        city +
+        '?key=CQ78E2P96ZCAAKF2DTK6F4FU3',
+      { mode: 'cors' },
+    );
+    const data = await response.json();
+    console.log(data);
+    processData(data);
+  } catch (error) {
+    alert(error);
+  }
 }
 
-fetchData('Istanbul');
+function processData(data) {
+  // const processedData = {}
+  let {
+    resolvedAddress: address,
+    latitude,
+    longitude,
+    timezone,
+    tzoffset,
+    currentConditions: { conditions: currentCondition },
+    currentConditions: { feelslike: currentFeelslike },
+    currentConditions: { humidity: currentHumidity },
+    currentConditions: { icon: currentIcon },
+    currentConditions: { temp: currentTemperature },
+  } = data;
+  console.log(
+    address,
+    latitude,
+    longitude,
+    timezone,
+    tzoffset,
+    currentCondition,
+    currentFeelslike,
+    currentHumidity,
+    currentIcon,
+    currentTemperature,
+  );
+}
+
+newRequest('Istanbul');
+
+// let { type: car_type, color: car_color } = car;
