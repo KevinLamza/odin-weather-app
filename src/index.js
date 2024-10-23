@@ -12,6 +12,8 @@ if (process.env.NODE_ENV !== 'production') {
 
 // ---------------------- START YOUR CODE BELOW HERE
 
+import { processData } from './processData.js';
+
 async function newRequest(city) {
   try {
     const response = await fetch(
@@ -28,34 +30,4 @@ async function newRequest(city) {
   }
 }
 
-function processData(data) {
-  // const processedData = {}
-  let {
-    resolvedAddress: address,
-    latitude,
-    longitude,
-    timezone,
-    tzoffset,
-    currentConditions: { conditions: currentCondition },
-    currentConditions: { feelslike: currentFeelslike },
-    currentConditions: { humidity: currentHumidity },
-    currentConditions: { icon: currentIcon },
-    currentConditions: { temp: currentTemperature },
-  } = data;
-  console.log(
-    address,
-    latitude,
-    longitude,
-    timezone,
-    tzoffset,
-    currentCondition,
-    currentFeelslike,
-    currentHumidity,
-    currentIcon,
-    currentTemperature,
-  );
-}
-
 newRequest('Istanbul');
-
-// let { type: car_type, color: car_color } = car;
