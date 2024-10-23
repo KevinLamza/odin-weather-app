@@ -16,14 +16,14 @@ import { processData } from './processData.js';
 
 async function newRequest(city) {
   try {
-    const response = await fetch(
+    const serverResponse = await fetch(
       'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/' +
         city +
         '?key=CQ78E2P96ZCAAKF2DTK6F4FU3',
       { mode: 'cors' },
     );
-    const rawData = await response.json();
-    console.log(rawData);
+    const rawData = await serverResponse.json();
+    //console.log(rawData);
     const processedData = processData(rawData);
     console.log(processedData);
     // updateUI()
