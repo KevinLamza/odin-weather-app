@@ -11,3 +11,16 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 // ---------------------- START YOUR CODE BELOW HERE
+
+async function fetchData(city) {
+  const response = await fetch(
+    'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/' +
+      city +
+      '?key=CQ78E2P96ZCAAKF2DTK6F4FU3',
+    { mode: 'cors' },
+  );
+  const data = await response.json();
+  console.log(data);
+}
+
+fetchData('Istanbul');
