@@ -7,100 +7,658 @@
 </head>
 <body>
     <div class="container">
-      <div class="searchContainer">
-        <form novalidate>
-          <input type="text" id="search" name="search" placeholder="Search for a city e.g. Paris"><br><br>
-          <input type="submit" value="Submit">
-        </form>
-        <button>C° / F° </button>
+      <div class="formButtonContainer">
+        <div class="formContainer">
+          <form novalidate>
+            <input type="text" id="search" name="search" placeholder="Search for a city e.g. Paris">
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+        <div class="buttonContainer">
+          <button id="convertUnitButton">C° / F° </button>
+        </div>
+      </div>
+      <div class="current">
+        <p>Istanbul</p>
+        <p>14:56</p>
+        <p>Latitude / Longitude</p>
+        <p>32°C</p>
+        <img src="assets/clear-day.png">
       </div>
       <div class="weeklyForecast">
-        <div class="dayShort" id="day0Short"></div>
-        <div class="dayShort" id="day1Short"></div>
-        <div class="dayShort" id="day2Short"></div>
-        <div class="dayShort" id="day3Short"></div>
-        <div class="dayShort" id="day4Short"></div>
-        <div class="dayShort" id="day5Short"></div>
-        <div class="dayShort" id="day6Short"></div>
+        <div class="dayShort" id="day0Short">
+          <p>It' warm outside</p>
+          <img src="assets/clear-day.png">
+          <p>T: 30°C</p>
+          <p>H: 87%</p>
+          <p>feels like: 32°C</p>
+        </div>
+        <div class="dayShort" id="day1Short">
+          <p>It' warm outside</p>
+          <img src="assets/clear-day.png">
+          <p>30°C</p>
+          <p>87%</p>
+          <p>feels like: 32°C</p>
+        </div>
+        <div class="dayShort" id="day2Short">
+          <p>It' warm outside</p>
+          <img src="assets/clear-day.png">
+          <p>30°C</p>
+          <p>87%</p>
+          <p>feels like: 32°C</p>
+        </div>
+        <div class="dayShort" id="day3Short">
+          <p>It' warm outside</p>
+          <img src="assets/clear-day.png">
+          <p>30°C</p>
+          <p>87%</p>
+          <p>feels like: 32°C</p>
+        </div>
+        <div class="dayShort" id="day4Short">
+          <p>It' warm outside</p>
+          <img src="assets/clear-day.png">
+          <p>30°C</p>
+          <p>87%</p>
+          <p>feels like: 32°C</p>
+        </div>
+        <div class="dayShort" id="day5Short">
+          <p>It' warm outside</p>
+          <img src="assets/clear-day.png">
+          <p>30°C</p>
+          <p>87%</p>
+          <p>feels like: 32°C</p>
+        </div>
+        <div class="dayShort" id="day6Short">
+          <p>It' warm outside</p>
+          <img src="assets/clear-day.png">
+          <p>30°C</p>
+          <p>87%</p>
+          <p>feels like: 32°C</p>
+        </div>
       </div>
       <div class="hourlyForecastContainer">
         <div class="hourlyForecast" id="hourlyForecastDay0">
-          <div class="hour" id="day0hour00"></div>
-          <div class="hour" id="day0hour01"></div>
-          <div class="hour" id="day0hour02"></div>
-          <div class="hour" id="day0hour03"></div>
-          <div class="hour" id="day0hour04"></div>
-          <div class="hour" id="day0hour05"></div>
-          <div class="hour" id="day0hour06"></div>
-          <div class="hour" id="day0hour07"></div>
-          <div class="hour" id="day0hour08"></div>
-          <div class="hour" id="day0hour09"></div>
-          <div class="hour" id="day0hour10"></div>
-          <div class="hour" id="day0hour11"></div>
-          <div class="hour" id="day0hour12"></div>
-          <div class="hour" id="day0hour13"></div>
-          <div class="hour" id="day0hour14"></div>
-          <div class="hour" id="day0hour15"></div>
-          <div class="hour" id="day0hour16"></div>
-          <div class="hour" id="day0hour17"></div>
-          <div class="hour" id="day0hour18"></div>
-          <div class="hour" id="day0hour19"></div>
-          <div class="hour" id="day0hour20"></div>
-          <div class="hour" id="day0hour21"></div>
-          <div class="hour" id="day0hour22"></div>
-          <div class="hour" id="day0hour23"></div>
+          <div class="hour" id="day0hour00">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p class="hourContentTime">0:00</p>
+              <p>30°C</p>
+              <p>feels like: 32°C</p>
+              <p>partly cloudy</p>
+            </div>
+          </div>
+          <div class="hour" id="day0hour01">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day0hour02">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day0hour03">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day0hour04">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day0hour05">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day0hour06">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day0hour07">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day0hour08">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day0hour09">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day0hour10">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day0hour11">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day0hour12">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day0hour13">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day0hour14">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day0hour15">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day0hour16">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day0hour17">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day0hour18">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day0hour19">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day0hour20">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day0hour21">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day0hour22">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day0hour23">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
         </div>
         <div class="hourlyForecast" id="hourlyForecastDay1">
-          <div class="hour" id="day1hour00"></div>
-          <div class="hour" id="day1hour01"></div>
-          <div class="hour" id="day1hour02"></div>
-          <div class="hour" id="day1hour03"></div>
-          <div class="hour" id="day1hour04"></div>
-          <div class="hour" id="day1hour05"></div>
-          <div class="hour" id="day1hour06"></div>
-          <div class="hour" id="day1hour07"></div>
-          <div class="hour" id="day1hour08"></div>
-          <div class="hour" id="day1hour09"></div>
-          <div class="hour" id="day1hour10"></div>
-          <div class="hour" id="day1hour11"></div>
-          <div class="hour" id="day1hour12"></div>
-          <div class="hour" id="day1hour13"></div>
-          <div class="hour" id="day1hour14"></div>
-          <div class="hour" id="day1hour15"></div>
-          <div class="hour" id="day1hour16"></div>
-          <div class="hour" id="day1hour17"></div>
-          <div class="hour" id="day1hour18"></div>
-          <div class="hour" id="day1hour19"></div>
-          <div class="hour" id="day1hour20"></div>
-          <div class="hour" id="day1hour21"></div>
-          <div class="hour" id="day1hour22"></div>
-          <div class="hour" id="day1hour23"></div>
+          <div class="hour" id="day1hour00">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day1hour01">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day1hour02">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day1hour03">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day1hour04">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day1hour05">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day1hour06">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day1hour07">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day1hour08">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day1hour09">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day1hour10">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day1hour11">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day1hour12">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day1hour13">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day1hour14">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day1hour15">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day1hour16">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day1hour17">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day1hour18">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day1hour19">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day1hour20">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day1hour21">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day1hour22">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day1hour23">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
         </div>
         <div class="hourlyForecast" id="hourlyForecastDay2">
-          <div class="hour" id="day2hour00"></div>
-          <div class="hour" id="day2hour01"></div>
-          <div class="hour" id="day2hour02"></div>
-          <div class="hour" id="day2hour03"></div>
-          <div class="hour" id="day2hour04"></div>
-          <div class="hour" id="day2hour05"></div>
-          <div class="hour" id="day2hour06"></div>
-          <div class="hour" id="day2hour07"></div>
-          <div class="hour" id="day2hour08"></div>
-          <div class="hour" id="day2hour09"></div>
-          <div class="hour" id="day2hour10"></div>
-          <div class="hour" id="day2hour11"></div>
-          <div class="hour" id="day2hour12"></div>
-          <div class="hour" id="day2hour13"></div>
-          <div class="hour" id="day2hour14"></div>
-          <div class="hour" id="day2hour15"></div>
-          <div class="hour" id="day2hour16"></div>
-          <div class="hour" id="day2hour17"></div>
-          <div class="hour" id="day2hour18"></div>
-          <div class="hour" id="day2hour19"></div>
-          <div class="hour" id="day2hour20"></div>
-          <div class="hour" id="day2hour21"></div>
-          <div class="hour" id="day2hour22"></div>
-          <div class="hour" id="day2hour23"></div>
+          <div class="hour" id="day2hour00">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day2hour01">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day2hour02">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day2hour03">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day2hour04">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day2hour05">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day2hour06">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day2hour07">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day2hour08">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day2hour09">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day2hour10">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day2hour11">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day2hour12">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day2hour13">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day2hour14">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day2hour15">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day2hour16">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day2hour17">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day2hour18">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day2hour19">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day2hour20">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day2hour21">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day2hour22">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
+          <div class="hour" id="day2hour23">
+            <img src="assets/clear-day.png">
+            <div class="hourContent">
+              <p>30°C</p>
+              <p>87%</p>
+              <p>feels like: 32°C</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

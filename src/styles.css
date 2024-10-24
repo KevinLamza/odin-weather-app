@@ -52,6 +52,87 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
+.container {
+  width: 1000px;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.formButtonContainer {
+  display: grid;
+  grid-template-columns: 1fr 100px;
+}
+
+.buttonContainer {
+  position: relative;
+}
+
+#convertUnitButton {
+  position: absolute;
+  right: 0px;
+}
+
+.current {
+  width: 400px;
+  margin: auto;
+  background-color: lightgreen;
+  margin-bottom: 20px;
+}
+
+.current p {
+  text-align: center;
+}
+
+.current img {
+  margin: auto;
+}
+
 .weeklyForecast {
   display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 1fr;
+  gap: 10px;
+}
+
+.dayShort {
+  background-color: lightblue;
+}
+
+.dayShort p {
+  text-align: center;
+}
+
+.dayShort img {
+  margin: auto;
+}
+
+/* .dayShort * {
+  background-color: lightblue;
+} */
+
+.hourlyForecastContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  width: 900px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.hourlyForecast {
+  display: grid;
+  grid-template-rows: repeat(24, 1fr);
+  gap: 10px;
+}
+
+.hour {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: lightpink;
+  align-items: center;
+}
+
+p.hourContentTime {
+  font-size: 24px;
+  font-weight: 600;
 }
