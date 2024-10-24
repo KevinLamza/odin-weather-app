@@ -13,6 +13,7 @@ if (process.env.NODE_ENV !== 'production') {
 // ---------------------- START YOUR CODE BELOW HERE
 
 import { processData } from './processData.js';
+import { fetchDOM } from './fetchDOM.js';
 
 async function newRequest(city) {
   try {
@@ -32,5 +33,5 @@ async function newRequest(city) {
   }
 }
 
-// fetchDOM()
+fetchDOM();
 newRequest('Istanbul');
