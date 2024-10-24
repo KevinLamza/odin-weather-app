@@ -27,10 +27,26 @@ async function newRequest(city) {
     //console.log(rawData);
     const processedData = processData(rawData);
     console.log(processedData);
-    // updateUI()
+    updateUI();
   } catch (error) {
     alert(error);
   }
+}
+
+function updateUI() {
+  // weekdays forecast
+  for (let i = 0; i < 7; i++) {
+    // set the div
+    let div = document.createElement('div');
+    div.setAttribute('class', 'dayShort');
+    div.setAttribute('id', `day${i}Short`);
+
+    // create the content
+    let pCondition = document.createElement('p');
+
+    // append everything
+  }
+  // hourly forecast
 }
 
 const DOM = fetchDOM();

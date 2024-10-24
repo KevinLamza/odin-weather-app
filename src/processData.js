@@ -154,7 +154,7 @@ export function processData(data) {
     days: [
       {
         hours: [
-          { feelslike0: feelslike0h00 },
+          { feelslike: feelslike0h00 },
           { feelslike: feelslike0h01 },
           { feelslike: feelslike0h02 },
           { feelslike: feelslike0h03 },
@@ -497,24 +497,9 @@ export function processData(data) {
     ],
   } = data;
 
-  return {
-    address,
-    latitude,
-    longitude,
-    timezone,
-    tzoffset,
-    currentCondition,
-    currentFeelslike,
-    currentHumidity,
-    currentIcon,
-    currentTemperature,
-    date0,
-    date1,
-    date2,
-    date3,
-    date4,
-    date5,
-    date6,
+  const date = [date0, date1, date2, date3, date4, date5, date6];
+
+  const condition = [
     conditions0,
     conditions1,
     conditions2,
@@ -522,6 +507,9 @@ export function processData(data) {
     conditions4,
     conditions5,
     conditions6,
+  ];
+
+  const feelslike = [
     feelslike0,
     feelslike1,
     feelslike2,
@@ -529,6 +517,9 @@ export function processData(data) {
     feelslike4,
     feelslike5,
     feelslike6,
+  ];
+
+  const humidity = [
     humidity0,
     humidity1,
     humidity2,
@@ -536,6 +527,9 @@ export function processData(data) {
     humidity4,
     humidity5,
     humidity6,
+  ];
+
+  const temperature = [
     temperature0,
     temperature1,
     temperature2,
@@ -543,13 +537,11 @@ export function processData(data) {
     temperature4,
     temperature5,
     temperature6,
-    icon0,
-    icon1,
-    icon2,
-    icon3,
-    icon4,
-    icon5,
-    icon6,
+  ];
+
+  const icon = [icon0, icon1, icon2, icon3, icon4, icon5, icon6];
+
+  const conditionHours = [
     condition0h00,
     condition0h01,
     condition0h02,
@@ -622,6 +614,9 @@ export function processData(data) {
     condition2h21,
     condition2h22,
     condition2h23,
+  ];
+
+  const feelslikeHours = [
     feelslike0h00,
     feelslike0h01,
     feelslike0h02,
@@ -694,6 +689,9 @@ export function processData(data) {
     feelslike2h21,
     feelslike2h22,
     feelslike2h23,
+  ];
+
+  const humidityHours = [
     humidity0h00,
     humidity0h01,
     humidity0h02,
@@ -766,6 +764,9 @@ export function processData(data) {
     humidity2h21,
     humidity2h22,
     humidity2h23,
+  ];
+
+  const iconHours = [
     icon0h00,
     icon0h01,
     icon0h02,
@@ -838,6 +839,9 @@ export function processData(data) {
     icon2h21,
     icon2h22,
     icon2h23,
+  ];
+
+  const temperatureHours = [
     temperature0h00,
     temperature0h01,
     temperature0h02,
@@ -910,5 +914,29 @@ export function processData(data) {
     temperature2h21,
     temperature2h22,
     temperature2h23,
+  ];
+
+  return {
+    address,
+    latitude,
+    longitude,
+    timezone,
+    tzoffset,
+    currentCondition,
+    currentFeelslike,
+    currentHumidity,
+    currentIcon,
+    currentTemperature,
+    date,
+    condition,
+    feelslike,
+    humidity,
+    temperature,
+    icon,
+    conditionHours,
+    feelslikeHours,
+    humidityHours,
+    iconHours,
+    temperatureHours,
   };
 }
