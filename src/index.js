@@ -33,5 +33,5 @@ async function newRequest(city) {
   }
 }
 
-fetchDOM();
+const DOM = fetchDOM();
 newRequest('Istanbul');
