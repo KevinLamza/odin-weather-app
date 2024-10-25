@@ -96,10 +96,16 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .dayShort {
   background-color: lightblue;
+  position: relative;
 }
 
 .dayShort p {
   text-align: center;
+}
+
+.dayShort p.pCondition {
+  height: 50px;
+  padding-top: 20px;
 }
 
 .dayShort img {

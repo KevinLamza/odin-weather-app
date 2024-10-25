@@ -3,9 +3,9 @@ export function fetchDOM() {
 
   const current = document.querySelector('.current');
   const weeklyForecast = document.querySelector('.weeklyForecast');
-  const hourlyForecastDay0 = document.querySelector('.hourlyForecastDay0');
-  const hourlyForecastDay1 = document.querySelector('.hourlyForecastDay1');
-  const hourlyForecastDay2 = document.querySelector('.hourlyForecastDay2');
+  const hourlyForecastDay0 = document.querySelector('#hourlyForecastDay0');
+  const hourlyForecastDay1 = document.querySelector('#hourlyForecastDay1');
+  const hourlyForecastDay2 = document.querySelector('#hourlyForecastDay2');
 
   return {
     convertUnitButton,
