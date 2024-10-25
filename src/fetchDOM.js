@@ -1,4 +1,6 @@
-export function fetchDOM() {
+export const DOM = fetchDOM();
+
+function fetchDOM() {
   const convertUnitButton = document.getElementById('convertUnitButton');
 
   const current = document.querySelector('.current');

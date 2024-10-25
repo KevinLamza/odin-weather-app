@@ -1,4 +1,28 @@
-export function updateUI(processedData) {
+import {
+  handleImg,
+  convertFahrenheitToCelsius,
+  getLocalTime,
+} from './utilities';
+import { DOM } from './fetchDOM';
+
+export function updateUI(processedData, unit) {
+  // clear first previous UI
+  while (DOM.current.firstChild) {
+    DOM.current.removeChild(DOM.current.firstChild);
+  }
+  while (DOM.weeklyForecast.firstChild) {
+    DOM.weeklyForecast.removeChild(DOM.weeklyForecast.firstChild);
+  }
+  while (DOM.hourlyForecastDay0.firstChild) {
+    DOM.hourlyForecastDay0.removeChild(DOM.hourlyForecastDay0.firstChild);
+  }
+  while (DOM.hourlyForecastDay1.firstChild) {
+    DOM.hourlyForecastDay1.removeChild(DOM.hourlyForecastDay1.firstChild);
+  }
+  while (DOM.hourlyForecastDay2.firstChild) {
+    DOM.hourlyForecastDay2.removeChild(DOM.hourlyForecastDay2.firstChild);
+  }
+
   // current forecast
   let pCity = document.createElement('p');
   pCity.textContent = processedData.address;
@@ -7,7 +31,7 @@ export function updateUI(processedData) {
   pTimezone.textContent = processedData.timezone;
 
   let pCurrentTime = document.createElement('p');
-  pCurrentTime.textContent = getLocalTime();
+  pCurrentTime.textContent = getLocalTime(processedData.tzoffset);
 
   let pLatitude = document.createElement('p');
   pLatitude.textContent = `Latitude: ${processedData.latitude}`;
@@ -16,7 +40,7 @@ export function updateUI(processedData) {
   pLongitude.textContent = `Longitude: ${processedData.latitude}`;
 
   let pCurrentTemp = document.createElement('p');
-  pCurrentTemp.textContent = `${convertFahrenheitToCelsius(processedData.currentTemperature)}${unit}`;
+  pCurrentTemp.textContent = `${convertFahrenheitToCelsius(processedData.currentTemperature, unit)}${unit}`;
 
   let pCurrentCondition = document.createElement('p');
   pCurrentCondition.textContent = `${processedData.currentCondition}`;
@@ -51,7 +75,7 @@ export function updateUI(processedData) {
 
     // create the temperature paragraph
     let pTemperature = document.createElement('p');
-    pTemperature.textContent = `T: ${convertFahrenheitToCelsius(processedData.temperature[i])}${unit}`;
+    pTemperature.textContent = `T: ${convertFahrenheitToCelsius(processedData.temperature[i], unit)}${unit}`;
 
     // create the humidity paragraph
     let pHumidity = document.createElement('p');
@@ -59,7 +83,7 @@ export function updateUI(processedData) {
 
     // create the feelslike paragraph
     let pFeelslike = document.createElement('p');
-    pFeelslike.textContent = `Feels like: ${convertFahrenheitToCelsius(processedData.feelslike[i])}${unit}`;
+    pFeelslike.textContent = `Feels like: ${convertFahrenheitToCelsius(processedData.feelslike[i], unit)}${unit}`;
 
     div.appendChild(pCondition);
     div.appendChild(img);
@@ -98,11 +122,11 @@ export function updateUI(processedData) {
 
       // create temperature paragraph
       let pTemp = document.createElement('p');
-      pTemp.textContent = `${convertFahrenheitToCelsius(processedData.temperatureHours[i * 23 + j])}${unit}`;
+      pTemp.textContent = `${convertFahrenheitToCelsius(processedData.temperatureHours[i * 23 + j], unit)}${unit}`;
 
       // create feelslike paragraph
       let pFeelslike = document.createElement('p');
-      pFeelslike.textContent = `${convertFahrenheitToCelsius(processedData.temperatureHours[i * 23 + j])}${unit}`;
+      pFeelslike.textContent = `${convertFahrenheitToCelsius(processedData.temperatureHours[i * 23 + j], unit)}${unit}`;
 
       // create condition paragraph
       let pCondition = document.createElement('p');
