@@ -52,6 +52,10 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
+body {
+  background-color: lightyellow
+}
+
 .container {
   width: 1000px;
   margin: auto;
@@ -76,6 +80,7 @@ p, h1, h2, h3, h4, h5, h6 {
   width: 400px;
   margin: auto;
   background-color: lightgreen;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
@@ -85,6 +90,30 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .current img {
   margin: auto;
+  width: 128px;
+}
+
+.current + p {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 50px;
+  margin-bottom: 12px;
+}
+
+.currentCity {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.currentTime {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.currentTemperature {
+  font-size: 60px;
+  font-weight: 600;
 }
 
 .weeklyForecast {
@@ -92,6 +121,15 @@ p, h1, h2, h3, h4, h5, h6 {
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: 1fr;
   gap: 10px;
+}
+
+.weeklyForecast + p {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 50px;
+  margin-bottom: -12px;
+  padding-bottom: 0px;
 }
 
 .dayShort {
@@ -119,10 +157,18 @@ p, h1, h2, h3, h4, h5, h6 {
 .hourlyForecastContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
+  grid-template-rows: fit-content 1fr;
+  column-gap: 20px;
+  row-gap: 10px;
   width: 900px;
   margin: auto;
   margin-top: 20px;
+}
+
+.hourlyForecastContainer > p {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 .hourlyForecast {
@@ -137,6 +183,7 @@ p, h1, h2, h3, h4, h5, h6 {
   background-color: lightpink;
   align-items: center;
 }
+
 
 p.hourContentTime {
   font-size: 24px;

@@ -2,6 +2,8 @@ export const DOM = fetchDOM();
 
 function fetchDOM() {
   const convertUnitButton = document.getElementById('convertUnitButton');
+  const submitButton = document.getElementById('submitButton');
+  const search = document.getElementById('search');
 
   const current = document.querySelector('.current');
   const weeklyForecast = document.querySelector('.weeklyForecast');
@@ -10,6 +12,8 @@ function fetchDOM() {
   const hourlyForecastDay2 = document.querySelector('#hourlyForecastDay2');
 
   return {
+    submitButton,
+    search,
     convertUnitButton,
     current,
     weeklyForecast,

@@ -26,12 +26,14 @@ export function updateUI(processedData, unit) {
   // current forecast
   let pCity = document.createElement('p');
   pCity.textContent = processedData.address;
+  pCity.setAttribute('class', 'currentCity');
 
   let pTimezone = document.createElement('p');
   pTimezone.textContent = processedData.timezone;
 
   let pCurrentTime = document.createElement('p');
   pCurrentTime.textContent = getLocalTime(processedData.tzoffset);
+  pCurrentTime.setAttribute('class', 'currentTime');
 
   let pLatitude = document.createElement('p');
   pLatitude.textContent = `Latitude: ${processedData.latitude}`;
@@ -41,6 +43,7 @@ export function updateUI(processedData, unit) {
 
   let pCurrentTemp = document.createElement('p');
   pCurrentTemp.textContent = `${convertFahrenheitToCelsius(processedData.currentTemperature, unit)}${unit}`;
+  pCurrentTemp.setAttribute('class', 'currentTemperature');
 
   let pCurrentCondition = document.createElement('p');
   pCurrentCondition.textContent = `${processedData.currentCondition}`;
@@ -50,9 +53,9 @@ export function updateUI(processedData, unit) {
 
   DOM.current.appendChild(pCity);
   DOM.current.appendChild(pTimezone);
-  DOM.current.appendChild(pCurrentTime);
   DOM.current.appendChild(pLatitude);
   DOM.current.appendChild(pLongitude);
+  DOM.current.appendChild(pCurrentTime);
   DOM.current.appendChild(pCurrentTemp);
   DOM.current.appendChild(pCurrentCondition);
   DOM.current.appendChild(imgCurrent);
@@ -136,7 +139,7 @@ export function updateUI(processedData, unit) {
       div.appendChild(subDiv);
       subDiv.appendChild(pTime);
       subDiv.appendChild(pTemp);
-      subDiv.appendChild(pFeelslike);
+      // subDiv.appendChild(pFeelslike);
       subDiv.appendChild(pCondition);
 
       if (i === 0) DOM.hourlyForecastDay0.appendChild(div);

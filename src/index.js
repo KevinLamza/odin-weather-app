@@ -27,12 +27,16 @@ async function newRequest(city) {
         '?key=CQ78E2P96ZCAAKF2DTK6F4FU3',
       { mode: 'cors' },
     );
+    if (serverResponse.status >= 400 && serverResponse.status < 600) {
+      throw new Error('Not a valid city!');
+    }
     const rawData = await serverResponse.json();
     //console.log(rawData);
     processedData = processData(rawData);
     console.log(processedData);
     updateUI(processedData, unit);
   } catch (error) {
+    console.log(error);
     alert(error);
   }
 }
@@ -43,6 +47,16 @@ DOM.convertUnitButton.addEventListener(
     if (unit === '°F') unit = '°C';
     else unit = '°F';
     updateUI(processedData, unit);
+  },
+  false,
+);
+
+DOM.submitButton.addEventListener(
+  'click',
+  (event) => {
+    console.log(DOM.search.value);
+    newRequest(DOM.search.value);
+    event.preventDefault();
   },
   false,
 );

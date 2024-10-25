@@ -4,6 +4,7 @@ import imgCloudyDay from './assets/cloudy-day.png';
 import imgCloudyNight from './assets/cloudy-night.png';
 import imgPartlyCloudyNight from './assets/partly-cloudy-night.png';
 import imgPartlyCloudyDay from './assets/partly-cloudy-day.png';
+import imgCloudy from './assets/cloudy.png';
 import imgRain from './assets/rain.png';
 
 export function handleImg(img, path) {
@@ -19,6 +20,8 @@ export function handleImg(img, path) {
     img.src = imgPartlyCloudyDay;
   } else if (path === 'partly-cloudy-night') {
     img.src = imgPartlyCloudyNight;
+  } else if (path === 'cloudy') {
+    img.src = imgCloudy;
   } else if (path === 'rain') {
     img.src = imgRain;
   }
@@ -43,5 +46,8 @@ export function getLocalTime(h) {
   const now = new Date();
   const utc = new Date(now.getTime() + now.getTimezoneOffset() * 60000);
   const localTime = new Date(utc.getTime() + h * 60 * 60000);
-  return `${localTime.getHours()}:${localTime.getMinutes()}`;
+  let minutes;
+  if (localTime.getMinutes() < 10) minutes = '0' + localTime.getMinutes();
+  else minutes = localTime.getMinutes();
+  return `${localTime.getHours()}:${minutes}`;
 }
